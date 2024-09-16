@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Nathan Taylor
+- **Dot Number**: Taylor.3915
+- **Due Date**: 9/16/24 @ 4:10pm
 
 ## Assignment Overview
 
@@ -233,57 +233,55 @@ will likely refine your design to make your implementation easier to use.
     - void removeTask(Task task): Removes a task from the list.       
       
     - Queue<Task> getTasks(): Returns the list of tasks.
+   
+    - void markTaskComplete(Task task): Marks a task as complete.
       
   - **Secondary Methods**:
-    - void markTaskComplete(Task task): Marks a task as complete.       
-      
+           
     - Queue<Task> getPendingTasks(): Returns a list of pending tasks.
       
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - HERE
+      - Yes as the completeness of each tasks needs to be adjustable.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - HERE
+      - No. The only additional components needed would be a queue for getTasks and getPendingTasks.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - HERE
+      - An enum may be needed to track the size and completeness of the tasklist, depending on what enums do.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes.
+      - Yes. getPendingTasks could use getTasks() 
 
    - Component Design #3: ShoppingCart
   - **Description**:
     - The purpose of this component is to model a shopping cart for a store's sales application.
   - **Kernel Methods**:
-    - 
+    - void addItem(String item, int price): Adds an item to the cart.
 
-    -        
+    - int removeItem(String item): Removes an item from the cart.       
       
-    - 
+    - double getTotal(): Returns the total cost of items in the cart. 
       
   - **Secondary Methods**:
-    - 
+    - void applyDiscount(double percentage): Applies a discount to the total cost.
 
-    -        
-      
-    - 
-
+    - Map<String, Int> getItems(): Returns a list of items in the cart.       
       
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - HERE
+      - Yes it would be mutable because the price of the item would need to be adjustable.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - HERE
+      - A map would be needed but items do not need to be paired to their price.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - HERE
+      - Cart size can really be allowed to be unlimited online. So no constants should be necessary.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes. 
+      - Yes. getItems can be made by removing every item from the cart and creating a map with the name and price of each item simply using removeItem. 
 
 
 ## Post-Assignment
@@ -293,7 +291,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -311,13 +308,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2024.09.15
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a PlayerCharacter component
+- Designed a TaskManager component
+- Designed a ShoppingCart component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -332,7 +329,7 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
+
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -342,11 +339,11 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
+
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
+
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the

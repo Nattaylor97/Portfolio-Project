@@ -252,7 +252,7 @@ will likely refine your design to make your implementation easier to use.
       - An enum may be needed to track the size and completeness of the tasklist, depending on what enums do.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes. getPendingTasks could use getTasks() 
+      - Yes. getPendingTasks could create a new task list and add all the non-completed tasks to a new task list to return.
 
    - Component Design #3: ShoppingCart
   - **Description**:
